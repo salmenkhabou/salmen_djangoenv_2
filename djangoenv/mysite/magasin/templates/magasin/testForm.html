@@ -1,0 +1,16 @@
+{% include 'magasin/base.html' %} 
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<center>
+<div class="col-md-12 text-center">
+    <h2>Saisie de forunisseur ...... </h2>
+</div>
+<form method='POST' class="post-form">
+    {% csrf_token %} 
+    {{ form.as_p }} 
+    <button type="sumit" class="btn btn-default">Enregistrer</button> 
+
+</form>
+</center>

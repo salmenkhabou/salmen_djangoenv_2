@@ -1,0 +1,37 @@
+<!-- {% include "base.html" %}
+
+{% block content %}
+<h1>Panier d'achat</h1>
+
+{% if cart_items %}
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Nom</th>
+        <th>Quantité</th>
+        <th>Prix unitaire</th>
+        <th>Prix total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in cart_items %}
+      <tr>
+        <td><img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="50"></td>
+        <td>{{ item.product.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.product.price }}</td>
+        <td>{{ item.get_total }}</td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="4">Total :</td>
+        <td>{{ cart.get_total }}</td>
+      </tr>
+    </tbody>
+  </table>
+{% else %}
+  <p>Votre panier est vide.</p>
+{% endif %}
+
+{% endblock %} -->

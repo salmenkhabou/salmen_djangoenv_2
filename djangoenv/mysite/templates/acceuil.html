@@ -1,0 +1,38 @@
+<!DOCTYPE html"> 
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<html lang="fr"> 
+    <head> 
+        <meta charset="utf-8" /> 
+        <title>Création d&#39;un design étape par étape - Etape n°1 : Le code xhtml</title> 
+    </head> 
+    <body> 
+        <div id="conteneur"> 
+            {% if request.session.username %}
+                <p>Bienvenue, {{ request.session.username }}!</p>
+            {% else %}
+                <p>Bienvenue, visiteur!</p>
+            {% endif %}
+
+            <h1 id="header">
+                <a href="#" title="Colored Design - Accueil">
+                    <span>Colored Design</span>
+                </a>
+            </h1>
+                    <nav> 
+                        <ul id="menu"> 
+                            <li><a href="/magasin/">Application n°1 : Magasin</a></li> 
+                            <li><a href="#">Application n°2</a></li> 
+                            <li><a href="#">Application n°3</a></li> 
+                        </ul>
+                    </nav> 
+                    <div id="contenu"> 
+                        <h2>Un titre</h2> 
+                        <p>Un paragraphe</p> 
+                    </div> 
+                    <p id="footer">Base de Page de Votre Site Web Django</p> 
+                </div> 
+            </body> 
+            </html>

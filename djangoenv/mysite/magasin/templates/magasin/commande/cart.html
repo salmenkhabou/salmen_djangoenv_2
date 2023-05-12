@@ -1,0 +1,15 @@
+<center>
+    {% include 'base.html' %}
+    
+    {% block content %}
+    
+      <h1 style="font-size: 2rem; margin-bottom: 1rem;">Ajouter une commande</h1>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table style="border-collapse: collapse;">
+          {{ form.as_table }}
+        </table>
+        <input type="submit" value="Ajouter" style="background-color: #4CAF50; color: white; padding: 0.5rem 1rem; border: none; border-radius: 0.25rem; margin-top: 1rem;">
+      </form>
+    {% endblock %}
+    </center>

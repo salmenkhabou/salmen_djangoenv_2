@@ -1,0 +1,32 @@
+{% include 'base.html' %}
+{% load static%}
+{% block content %}
+
+
+<form method='POST' class="post-form" enctype="multipart/form-data">
+{% csrf_token %}
+<div class="album py-5 bg-light">
+  <h1 class="commande-title">Commande {{ commande.id }}</h1>
+  <p>Date de la commande: {{ commande.dateCde }}</p>
+  <p class="commande-total">Total de la commande: {{ commande.totalCde }}</p>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for p in commande.produits.all %}
+        <div class="col"> 
+        <div class="card shadow-sm">
+          <img src='{{ p.img.url }}' alt="{{ p.libellé }} image" class="card-img-top" height="200px"  width="200px">
+          <div class="card-body">
+            <figcaption class="figure-caption"> 
+              {{ p.libellé }} 
+               </figcaption>
+               <p>{{ p.prix }} € </p>           
+                <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

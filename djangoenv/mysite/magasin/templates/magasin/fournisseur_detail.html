@@ -1,0 +1,15 @@
+{% include 'magasin/base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<center>
+{% block content %}
+  <h1>{{ fournisseur.nom }}</h1>
+  <p>Adresse: {{ fournisseur.adresse }}</p>
+  <p>Email: {{ fournisseur.email }}</p>
+  <p>telephone: {{ fournisseur.telephone }}</p>
+<button class="btn btn-primary"><a href="{%url 'affichefou'%}">Back</a>
+</button>
+{% endblock %}
+</center>

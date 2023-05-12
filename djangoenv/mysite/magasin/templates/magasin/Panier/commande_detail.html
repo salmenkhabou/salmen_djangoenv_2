@@ -1,0 +1,30 @@
+<!-- <h1>Détails de la commande {{ commande.id }}</h1>
+
+<p>Passée le {{ commande.date_commande|date:"d/m/Y" }} à {{ commande.date_commande|date:"H:i" }}</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Produit</th>
+            <th>Quantité</th>
+            <th>Prix unitaire</th>
+            <th>Prix total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for detail in details %}
+        <tr>
+            <td>{{ detail.produit.libellé }}</td>
+            <td>{{ detail.quantite }}</td>
+            <td>{{ detail.prix_unitaire }} €</td>
+            <td>{{ detail.prix_total }} €</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total :</td>
+            <td>{{ commande.prix_total }} €</td>
+        </tr>
+    </tfoot>
+</table> -->

@@ -1,0 +1,11 @@
+{% extends "magasin/base.html" %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<center>
+{% block content %}
+<h2>Vous êtes déconnecté. </h2>
+<a href="{% url 'login' %}">Se reconnecter</a>
+{% endblock %}
+</center>
